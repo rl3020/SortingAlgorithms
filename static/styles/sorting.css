@@ -1,0 +1,209 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: black;
+}
+
+nav{
+    
+    font-family: sans-serif;
+    color: white;
+    float: left;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100vw;
+}
+
+nav .title{
+    margin-left: 10px;
+    font-size: 24px;
+    color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+nav .title:hover{
+    cursor: pointer;
+}
+
+nav ul{
+    list-style: none;
+    
+}
+
+nav li{
+    padding-top: 20px;
+    float: left;
+    
+}
+
+nav li a{
+    display: block;
+    margin-right: 20px;
+}
+
+nav li a:hover{
+    background-color: grey;
+    cursor: pointer; 
+}
+
+
+/* Main Container */
+.container{
+    width: 80%;
+    margin: auto;
+    background-color: black;
+    padding: 50px;
+    display: flex;
+}
+
+
+#bar-container{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 85%;
+    height: 350px;
+}
+
+.selections-container{
+    width: 80%;
+    position: fixed;
+    top:500px;
+    left:10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container-sort{
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 15%;
+}
+
+.container-sort .select-sorting-algorithm-container{
+    display: flex;
+}
+
+.container-sort .select-sorting-algorithm-container #sort-dropdown{
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.container-sort #sort-dropdown ul li{
+    list-style-type: none;
+    background-color: aqua;
+    display: absolute;
+    padding: 12px 12px;
+    width: 150px;
+}
+
+.container-sort #sort-dropdown ul li:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+
+
+.slidecontainer {
+    width: 45%; /* Width of the outside container */
+    flex-direction: column;
+    margin-left: 10%;
+}
+
+.slidecontainer .slider{
+    -webkit-appearance: none;
+    width: 200px;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+
+.slidecontainer #myRange{
+    margin-left: 25px;
+    display: inline-block;
+}
+
+.slidecontainer .slider::-webkit-slider-thumb{
+    border-radius: 50%;
+    background: aqua;
+}
+
+
+.text-description{
+    font-size: large;
+    display: inline-block;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+#range-value{
+    color: white; 
+    font-size: large;
+    padding: 2px;
+}
+
+.button-container{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 175px;
+}
+
+.button-container .button{
+    width: 180px;
+    height: fit-content;
+    background-color: azure;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 2px;
+    justify-content: center;
+    border: none;
+    margin-left: 5px;
+}
+
+/* box animations on swap/currentElements/unmark */
+.box{
+    width: 50px;
+    background-color: aqua;
+    border-radius: 5px 5px 0px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: flex-end;
+    justify-content: center;
+    border-left: black;
+    border-right: black;
+    border-style: solid;
+    border-width: 1px;
+    transition: all .5s;
+}
+
+.current-box{
+    background-color: darkblue;
+    transition: all .5s;
+}
+
+.done{
+    background-color: #59b53f;
+    transition: all .5s;
+}
+
+

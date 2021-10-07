@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/sorting.css') }}">
+    <title>Sorting</title>
+    
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar" >
+        <div class="title">Sorting Algorithms</div>
+        <!-- <ul class="links">
+            <li><a> < home > </a></li>
+            <li><a> < code > </a></li>
+        </ul> -->
+    </nav>
+
+    <div class="container"> 
+        <div id="bar-container"> 
+        </div>
+    </div>
+
+
+    <div class="selections-container">
+        <div class="container-sort">
+            <div class="select-sorting-algorithm-container">
+                <div class="text-description">Sorting Algorithms</div>
+                <div id="sort-dropdown">
+                    <ul>
+                        <li id="insertionSort">
+                            Insertion Sort 
+                        </li>
+                        <li id="selectionSort">
+                            Selection Sort 
+                        </li>
+                        <li id="mergeSort">
+                            Merge Sort 
+                        </li>
+                    </ul> 
+                </div>  
+            </div>
+        </div>
+        
+        <div class="slidecontainer">
+            <span id="range-value"> 25 </span><div class="text-description"> Bars</div>
+            <input type="range" min="5" max="100" value="25" class="slider" id="myRange">
+        </div>
+    </div> 
+
+    <div class="button-container">
+        <button id="run-button" class="button ">Run</button>
+        <button id="reset-button" class="button ">Reset Order</button> 
+    </div>
+    
+    <script src="{{ url_for('static', filename='sorting.js') }}"></script>
+    <script src="{{ url_for('static', filename='AnimateSorting.js') }}"></script>
+    <script src="{{ url_for('static', filename='SortingAlgorithms.js') }}"></script>
+</body>
+</html>
