@@ -79,27 +79,36 @@ class SortingAlgorithms{
 
 
     mergeSort = async function(){
-        let animations = new AnimateSorting(this.array , 500);
-        this.array = await this.mergeSortHelper( this.array, animations );
+        
+        let left = 0; 
+        let mid = Math.floor(this.array.length / 2);
+        let right = this.array.length - 1; 
+
+        this.array = await this.mergeSortHelper( this.array, left, mid, right );
         console.log("After mergesort complete: " , this.array);
     }
 
 
-
     // recursive function to divide array and combine when sorted
-    
-    mergeSortHelper = async function(array, animations){
+    mergeSortHelper = async function(array, left, mid, right){
+
+        let animations = new AnimateSorting(this.array , 500);
+
         //base case
         if(array.length <= 1){
             return array;
         }
 
-        let mid = Math.floor(array.length / 2); 
+        
 
-        animations.markSection(0, mid);
+        //mark section being animated
+        animations.markSection(left, mid);
         await animations.stall();
+
+        //sort the first half
         let leftArray = await this.mergeSortHelper(array.slice(0, mid), animations);
         
+        //sort the second half
         animations.markSection(mid, array.length);
         await animations.stall();
         let rightArray = await this.mergeSortHelper(array.slice(mid), animations);

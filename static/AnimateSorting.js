@@ -1,3 +1,4 @@
+
 class AnimateSorting{
     constructor(heightValues, speed){
         this.elements = document.getElementsByClassName("box"); 
@@ -19,7 +20,7 @@ class AnimateSorting{
 
     markSection = function(start, end, color=null){
         for(let i = start; i < end; i++){
-            this.elements[i].className = "box";
+            //this.elements[i].className = "box";
             if(color !== null){
                 this.elements[i].style.backgroundColor = color;
             }else{
